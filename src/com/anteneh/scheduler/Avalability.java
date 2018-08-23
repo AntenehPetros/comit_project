@@ -1,6 +1,6 @@
 package com.anteneh.scheduler;
 
-public class Avalability {
+public class Avalability{
 
     boolean monday = false;
     boolean tuesday = false;
@@ -9,7 +9,6 @@ public class Avalability {
     boolean friday = false;
     boolean saturday = false;
     boolean sunday = false;
-
 
 
 
@@ -85,14 +84,60 @@ public class Avalability {
         this.sunday = sunday;
     }
 
+    public int getAvailableDays(){
+        int availableDays=0;
+
+        if (isMonday())
+            availableDays++;
+        if (isTuesday())
+            availableDays++;
+        if (isWednesday())
+            availableDays++;
+        if(isThursday())
+            availableDays++;
+        if(isFriday())
+            availableDays++;
+        if (isSaturday())
+            availableDays++;
+        if (isSunday())
+            availableDays++;
+
+        return availableDays;
+    }
+
     public String toString ()
     {
-        return "Monday " + isMonday() +
-                "Tuesday" +isTuesday() +
-                "Wednesday" + isWednesday() +
-                "Thursday" + isThursday() +
-                "Friday"+ isFriday() +
-                "Saturday" + isSaturday() +
-                "Sunday" + isSunday();
+
+
+        boolean mon = isMonday();
+        boolean tues = isTuesday();
+        boolean wed = isWednesday();
+        boolean thur = isThursday();
+        boolean fri = isFriday();
+        boolean sat = isSaturday();
+        boolean sun = isSunday();
+        if (mon == true)
+            System.out.println("Monday");
+        if (tues == true)
+            System.out.println("Tuesday");
+        if (wed == true)
+            System.out.println("Wednsday");
+        if(thur == true)
+            System.out.println("Thursday");
+        if(fri ==true)
+            System.out.println("Friday");
+        if (sat == true)
+            System.out.println("Saturday");
+        if (sun == true)
+            System.out.println("Sunday");
+
+        /*return "Monday " + isMonday() +
+                "   Tuesday" +isTuesday() +
+                "   Wednesday" + isWednesday() +
+                "   Thursday" + isThursday() +
+                "   Friday"+ isFriday() +
+                "   Saturday" + isSaturday() +
+                "   Sunday" + isSunday();*/
+        return " ";
     }
 }

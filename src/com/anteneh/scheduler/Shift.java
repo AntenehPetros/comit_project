@@ -75,16 +75,17 @@ public class Shift {
     public void setSunday(int sunday) {
         this.sunday = sunday;
     }
+
     public String toString ()
     {
-        return " Number of staffs required for " +
-                "Monday = " + getMonday() +
-                " Tuesday = "+ getTuesday() +
-                " Wednsday = " + getWednesday() +
-                "Thursday = " + getThursday() +
-                "Friday = " + getFriday() +
-                "Saturday = "  + getSaturday() +
-                "Sunday = " + getSunday();
+        return " Number of staffs required for: \n" +
+                "Monday:     " + getMonday() +"\n"+
+                "Tuesday:    " + getTuesday() +"\n"+
+                "Wednsday:   " + getWednesday() +"\n"+
+                "Thursday:   " + getThursday() +"\n"+
+                "Friday:     " + getFriday() +"\n"+
+                "Saturday:   " + getSaturday() +"\n"+
+                "Sunday:     " + getSunday()+"\n";
     }
 
 }
