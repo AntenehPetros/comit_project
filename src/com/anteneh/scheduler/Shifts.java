@@ -1,39 +1,8 @@
 package com.anteneh.scheduler;
 
-public class Shiftone {
+public class Shifts {
 
-
-    private int [] availableShifts =  {0,0,0,0,0,0,0};
-
-    Shiftone(){
-
-    }
-
-    Shiftone(int [] availableShifts){
-        this.availableShifts = availableShifts;
-    }
-    public void setAvailableShifts(int [] availableShifts){
-        this.availableShifts = availableShifts;
-    }
-
-    public int [] getAvailableShifts (){
-
-        return availableShifts;
-    }
-
-    public String toString (){
-
-        return "Number of staffs required for: \n" +
-                "Monday:     " + availableShifts[0] + "\n" +
-                "Tuesday:    " + availableShifts[1] + "\n" +
-                "Wednsday:   " + availableShifts[2] + "\n" +
-                "Thursday:   " + availableShifts[3] + "\n" +
-                "Friday:     " + availableShifts[4] + "\n" +
-                "Saturday:   " + availableShifts[5] + "\n" +
-                "Sunday:     " + availableShifts[6] + "\n";
-    }
-
-    /*private int monday;
+    private int monday;
     private int tuesday;
     private int wednesday;
     private int thursday;
@@ -41,7 +10,11 @@ public class Shiftone {
     private int saturday;
     private int sunday;
 
-    Shiftone(int monday, int tuesday, int wednesday, int thursday, int friday, int saturday, int sunday) {
+    Shifts(){
+
+    }
+
+    Shifts(int monday, int tuesday, int wednesday, int thursday, int friday, int saturday, int sunday) {
         this.monday = monday;
         this.tuesday = tuesday;
         this.wednesday = wednesday;
@@ -125,5 +98,4 @@ public class Shiftone {
                 "Saturday:   " + getSaturday() + "\n" +
                 "Sunday:     " + getSunday() + "\n";
     }
-*/
 }

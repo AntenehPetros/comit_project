@@ -1,37 +1,38 @@
 package com.anteneh.scheduler;
 
-public class Staff extends Avalability {
+public class Staff {
     private String name;
     private double wage;
     private int id;
     private Avalability avalability;
 
-    Staff(){
+    Staff() {
 
     }
-    Staff(String name, double wage, int id){
-        this.name=name;
-        this.wage=wage;
+
+    Staff(String name, double wage, int id) {
+        this.name = name;
+        this.wage = wage;
         this.id = id;
-    }
-
-    public String getName() {
-        //float f= 2.35f; <--- Just to show you that floats are stupid
-        return name;
-    }
-
-    public void setId(int id)
-    {
-        this.id = id;
-    }
-    public int getId()
-    {
-        return id;
     }
 
     public void setName(String name) {
         this.name = name;
     }
+
+    public String getName() {
+
+        return name;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
+    }
+
 
     public double getWage() {
         return wage;
@@ -49,8 +50,7 @@ public class Staff extends Avalability {
         this.avalability = avalability;
     }
 
-    public String  toString ()
-    {
+    public String toString() {
         return getAvalability().toString();
     }
 }
