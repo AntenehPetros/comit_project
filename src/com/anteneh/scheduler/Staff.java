@@ -1,6 +1,6 @@
 package com.anteneh.scheduler;
 
-public class Staff {
+public class Staff extends Avalability{
     private String name;
     private double wage;
     private int id;

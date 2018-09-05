@@ -38,11 +38,12 @@ public class General {
         System.out.println("Register new employee:             1\n" +
                 "Submit your availability:          2\n" +
                 "Required staff for each day:       3\n" +
-                "Generate schedule:                 4\n" +
-                "Check vacant shifts:               5\n" +
-                "Pick a shift:                      6\n" +
-                "List of all employees:             7\n" +
-                "exit:                              8\n\n");
+                "See available Staff & Shift:       4\n" +
+                "Generate schedule:                 5\n" +
+                "Check vacant shifts:               6\n" +
+                "Pick a shift:                      7\n" +
+                "List of all employees:             8\n" +
+                "exit:                              10\n\n");
 
 
         Scanner read = new Scanner(System.in);
@@ -61,20 +62,26 @@ public class General {
                 break;
 
             case 4:
+                availableStaffAndShift(staffList, shifts);
+                break;
 
-                scheduling(staffList, shifts);
             case 5:
-                submain();
-                //pickShift();break;
-
+                scheduling(staffList, shifts);
                 break;
             case 6:
                 submain();
                 //availableShifts();
+                break;
             case 7:
-                listEmployee(staffList);
+                submain();
+                //pickShift();break;
 
+                break;
             case 8:
+                listEmployee(staffList);
+                break;
+
+            case 10:
                 exit();
             default:
                 System.out.println("Please choose a valid option from 1-8");
@@ -193,7 +200,7 @@ public class General {
 
 
     public static void staffNeeded() {
-        //Shifts shifts = new Shifts();
+        //Shifts shifts = new Shifts(); declared on top of the class instead
         Scanner read = new Scanner(System.in);
         System.out.println("How many staffs do you need for each day?\n \tplease enter one by oen\n");
         System.out.print("Monday:           ");
@@ -238,11 +245,121 @@ public class General {
 
     }
 
-
-    public static void scheduling(List<Staff> staffList, Shifts shifts) {
+    public static void availableStaffAndShift(List<Staff> staffList, Shifts shifts) {
 
         Schedule schedule = new Schedule();
-        schedule.availableStaffsAndRequiredShifts(staffList, shifts);
+        schedule.availableStaffsAndRequiredStaffs(staffList, shifts);
+
+
+    }
+
+    public static void scheduling(List<Staff> staffList, Shifts shifts) {
+        //int staffWithLeastAvailableDays;  // we will use this to assign a shift for a staff with the least availability
+
+        int modayIndex = shifts.getMonday();
+        System.out.print("Staff working on monday:       ");
+
+        for (int i = 0; i <= modayIndex; i++) {
+            if (shifts.getMonday() > 0 && i < staffList.size()) {
+                if (staffList.get(i).getAvalability().isMonday()) {
+                    System.out.print(staffList.get(i).getName() + "         \t\t");
+                    shifts.setMonday(shifts.getMonday() - 1);
+
+                }
+            }
+
+        }
+        System.out.println();
+
+        int tuesdayIndex = shifts.getTuesday();
+        System.out.print("Staff working on tuesday:      ");
+
+        for (int i = 0; i <= tuesdayIndex; i++) {
+            if (shifts.getTuesday() > 0 && i < staffList.size()) {
+                if (staffList.get(i).getAvalability().isTuesday()) {
+                    System.out.print(staffList.get(i).getName() + "         \t\t");
+                    shifts.setTuesday(shifts.getTuesday() - 1);
+
+                }
+            }
+
+        }
+        System.out.println();
+
+        int wednesdayIndex = shifts.getWednesday();
+        System.out.print("Staff working on wednesday:    ");
+
+        for (int i = 0; i <= wednesdayIndex; i++) {
+            if (shifts.getWednesday() > 0 && i < staffList.size()) {
+                if (staffList.get(i).getAvalability().isWednesday()) {
+                    System.out.print(staffList.get(i).getName() + "         \t\t");
+                    shifts.setWednesday(shifts.getWednesday() - 1);
+
+                }
+            }
+
+        }
+        System.out.println();
+
+        int thursdayIndex = shifts.getThursday();
+        System.out.print("Staff working on thursday:     ");
+
+        for (int i = 0; i <= thursdayIndex; i++) {
+            if (shifts.getThursday() > 0 && i < staffList.size()) {
+                if (staffList.get(i).getAvalability().isThursday()) {
+                    System.out.print(staffList.get(i).getName() + "         \t\t");
+                    shifts.setThursday(shifts.getThursday() - 1);
+
+                }
+            }
+
+        }
+        System.out.println();
+
+        int fridayIndex = shifts.getFriday();
+        System.out.print("Staff working on friday:       ");
+
+        for (int i = 0; i <= fridayIndex; i++) {
+            if (shifts.getFriday() > 0 && i < staffList.size()) {
+                if (staffList.get(i).getAvalability().isFriday()) {
+                    System.out.print(staffList.get(i).getName() + "         \t\t");
+                    shifts.setFriday(shifts.getFriday() - 1);
+
+                }
+            }
+
+        }
+        System.out.println();
+
+        int saturdayIndex = shifts.getSaturday();
+        System.out.print("Staff working on saturday:     ");
+
+        for (int i = 0; i <= saturdayIndex; i++) {
+            if (shifts.getSaturday() > 0 && i < staffList.size()) {
+                if (staffList.get(i).getAvalability().isSaturday()) {
+                    System.out.print(staffList.get(i).getName() + "         \t\t");
+                    shifts.setSaturday(shifts.getSaturday() - 1);
+
+                }
+            }
+
+        }
+        System.out.println();
+
+        int sundayIndex = shifts.getSunday();
+        System.out.print("Staff working on sunday:       ");
+
+        for (int i = 0; i <= sundayIndex; i++) {
+            if (shifts.getSunday() > 0 && i < staffList.size()) {
+                if (staffList.get(i).getAvalability().isSunday()) {
+                    System.out.print(staffList.get(i).getName() + "         \t\t");
+                    shifts.setSunday(shifts.getSunday() - 1);
+
+                }
+            }
+
+        }
+        System.out.println();
 
 
     }

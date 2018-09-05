@@ -34,7 +34,7 @@ public class Schedule {
     }
 
 
-    public static void availableStaffsAndRequiredShifts(List<Staff> staffList, Shifts shifts){
+    public static void availableStaffsAndRequiredStaffs(List<Staff> staffList, Shifts shifts){
 
         //To check how many staffs there ae in the system
         System.out.println("Total number of Staffs in the system    : " + staffList.size());
@@ -64,14 +64,7 @@ public class Schedule {
         //***********************************************************************//
 
         int[] availableStaffs = {0, 0, 0, 0, 0, 0, 0};
-        /*int availableOnMonday = 0;
-        int availableOnTuesday = 0;
-        int availableOnWednesday = 0;
-        int availableOnThursday = 0;
-        int availableOnFriday = 0;
-        int availableOnSaturday = 0;
-        int availableOnSunday = 0;*/
-
+        
 
         for (int i = 0; i < staffList.size(); i++) {
             if (staffList.get(i).getAvalability() !=null) {
