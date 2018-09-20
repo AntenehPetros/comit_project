@@ -367,7 +367,7 @@ public class General {
 
     public static void listEmployee(List<Staff> staffList) {
         System.out.println("=====================================================================");
-        System.out.println("Name                Wage             ID         Total availabe days");
+        System.out.println("Name                    Wage                ID          Total availabe days");
         System.out.println("=====================================================================");
         for (int i = 0; i <= staffList.size(); i++) {
             if (i < staffList.size()) {
