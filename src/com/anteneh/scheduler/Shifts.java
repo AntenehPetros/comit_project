@@ -1,6 +1,6 @@
 package com.anteneh.scheduler;
 
-public class Shift {
+public class Shifts {
 
     private int monday;
     private int tuesday;
@@ -10,14 +10,18 @@ public class Shift {
     private int saturday;
     private int sunday;
 
-    Shift(int monday, int tuesday, int wednesday, int thursday, int friday, int saturday, int sunday){
-        this.monday= monday;
+    Shifts(){
+
+    }
+
+    Shifts(int monday, int tuesday, int wednesday, int thursday, int friday, int saturday, int sunday) {
+        this.monday = monday;
         this.tuesday = tuesday;
         this.wednesday = wednesday;
         this.thursday = thursday;
         this.friday = friday;
-        this.saturday = saturday ;
-        this.sunday  = sunday;
+        this.saturday = saturday;
+        this.sunday = sunday;
     }
 
     public int getMonday() {
@@ -75,16 +79,23 @@ public class Shift {
     public void setSunday(int sunday) {
         this.sunday = sunday;
     }
-    public String toString ()
-    {
-        return " Number of staffs required for " +
-                "Monday = " + getMonday() +
-                " Tuesday = "+ getTuesday() +
-                " Wednsday = " + getWednesday() +
-                "Thursday = " + getThursday() +
-                "Friday = " + getFriday() +
-                "Saturday = "  + getSaturday() +
-                "Sunday = " + getSunday();
+
+    public int totalStaffRequired() {
+        int totalStaffRequired = getMonday() + getTuesday() + getWednesday() + getThursday() + getFriday() + getSaturday() + getSunday();
+        return totalStaffRequired;
+
     }
 
+
+
+    public String toString() {
+        return "Number of staffs required for: \n" +
+                "Monday:     " + getMonday() + "\n" +
+                "Tuesday:    " + getTuesday() + "\n" +
+                "Wednsday:   " + getWednesday() + "\n" +
+                "Thursday:   " + getThursday() + "\n" +
+                "Friday:     " + getFriday() + "\n" +
+                "Saturday:   " + getSaturday() + "\n" +
+                "Sunday:     " + getSunday() + "\n";
+    }
 }

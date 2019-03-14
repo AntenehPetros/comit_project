@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Schedule</title>
+
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+
+<h1 style="text-align: center">Smart Schedule</h1>
+
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="About.html">About</a>
+    <a href="availability.html">Availability</a>
+    <a href="#">Schedule</a>
+    <a href="#">Pick shifts</a>
+</div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+
+<div class="weeks">
+    <ul>
+        <li class="prev">&#10094;</li>
+        <li class="next">&#10095;</li>
+        <li>
+            First week<br>
+            <span style="font-size:18px"></span>
+        </li>
+    </ul>
+</div>
+
+<ul class="weekdays">
+    <li>Mo</li>
+    <li>Tu</li>
+    <li>We</li>
+    <li>Th</li>
+    <li>Fr</li>
+    <li>Sa</li>
+    <li>Su</li>
+</ul>
+
+<ul class="staffs">
+    <li>Staff1</li>
+    <li>Staff2</li>
+    <li>Staff3</li>
+    <li>Staff4</li>
+    <li>Staff5</li>
+    <li>Staff6</li>
+    <li>Staff7</li>
+    <li>Staff8</li>
+    <li>Staff9</li>
+    <li>Staff1</li>
+    <li>Staff11</li>
+    <li>Staff12</li>
+    <li>Staff13</li>
+    <li>Staff14</li>
+    <li>Staff15</li>
+    <li>Staff16</li>
+    <li>Staff17</li>
+    <li>Staff18</li>
+    <li>Staff19</li>
+    <li>Staff20</li>
+
+</ul>
+
+</body>
+</html>
